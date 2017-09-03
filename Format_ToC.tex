@@ -2,32 +2,37 @@
 \setcounter{tocdepth}{3} % 3 Gliederungsebenen im Inhaltsverzeichnis
 
 % Text des Labels beginnt im Abstand von x.xem vom linken Rand
+
+% chapter
 \titlecontents{chapter}[1.0em]{%
+	\normalsize\bfseries\protect\addvspace{15pt}
 }{% Nummerierung vom Textbeginn um x.xem nach links verschieben
-\contentslabel{1.0em}
+	\contentslabel{1.0em}\scshape
 }{%
 }{% Abstand der Zeichen hinter Kapitelname + Seitenangabe
-\titlerule*[0.7725pc]{.}\contentspage
+	\titlerule*[0.3pc]{.}\contentspage
 }
 
 % Sections
 % Text des Labels beginnt im Abstand von x.xem vom linken Rand
 \titlecontents{section}[3.133em]{%
+	\small\bfseries\protect
 }{% Nummerierung vom Textbeginn um x.xem nach links verschieben
-\contentslabel{1.809em}
+	\contentslabel{1.809em}
 }{%
 }{% Abstand der Zeichen hinter Kapitelname + Seitenangabe
-\titlerule*[0.7725pc]{.}\contentspage
+	\titlerule*[0.3pc]{.}\contentspage
 }
 
 % Subsections
 \titlecontents{subsection}[6.067em]{%
-%\addvspace{-0.5pc}
+	\footnotesize\addvspace{-0.4pc}
+	\bfseries\footnotesize\protect
 }{% Nummerierung vom Textbeginn um x.xem nach links schieben
-\contentslabel{2.605em}
+	\contentslabel{2.605em}
 }{% Nach dem Label
 }{% Abstand der Zeichen hinter Kapitelname + Seitenangabe
-\titlerule*[0.7725pc]{.}\contentspage
+	\titlerule*[0.3pc]{.}\contentspage
 }
 
 % Zu Testzwecken: Naechste Zeile in vorherige Zeile schieben
@@ -36,8 +41,17 @@
 
 % Abbildungs- und Tabellenverzeichnis Formatierung
 \makeatletter
-\renewcommand*{\l@figure}{\@dottedtocline{1}{0.0em}{2.5em}}
-\renewcommand*{\l@table}{\@dottedtocline{1}{0.0em}{2.5em}}
+% TODO tocloft commands not working. Conflict with titletoc, add "Tabelle" and "Abbildung" as prefix and ":" as suffix in LOT/LOF
+%\renewcommand*{\cftfigpresnum}{Abbildung~}
+%\renewcommand*{\cfttabpresnum}{Tabelle~}
+%\renewcommand{\cftfigaftersnum}{:}
+%\renewcommand{\cfttabaftersnum}{:}
+%\setlength{\cftfigindent}{0cm}                                   
+%\setlength{\cfttabindent}{0cm} 
+
+\renewcommand{\@dotsep}{0.3}
+\renewcommand*{\l@figure}{\@dottedtocline{1}{0.0em}{3.5em}}
+\renewcommand*{\l@table}{\@dottedtocline{1}{0.0em}{3.5em}}
 \makeatother
 
 % Abstand zwischen Ueberschriften und dem ersten Eintrag der toc, lof, lot 
