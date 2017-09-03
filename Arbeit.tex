@@ -122,15 +122,18 @@
 
 	%\vspace*{2.1em}
 	\tableofcontents			% Inhaltsverzeichnis
+	\markboth{\contentsname}{\contentsname}
 	\currentpdfbookmark{Inhaltsverzeichnis}{Inhaltsverzeichnis}	% Lesezeichen fuer Inhaltsverzeichnis
 	
 	\cleardoublepage
 	%\vspace*{2.1em}
 	\listoffigures				% Abbildungsverzeichnis
+	\markboth{\listfigurename}{\listfigurename}
 	
 	\cleardoublepage
 	%\vspace*{2.1em}
 	\listoftables				% Tabellenverzeichnis
+	\markboth{\listtablename}{\listtablename}
 
 	\printnomenclature			% Abkürzungs- und Symbolverzeichnis
 
@@ -161,7 +164,8 @@
 	%%%   NICHT AENDERN!!!                                                                    %%%
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	
-	\input{Format_Literaturverzeichnis}	% Literaturverzeichnis (BibTeX)	
+	\input{Format_Literaturverzeichnis}	% Literaturverzeichnis (BibTeX)
+	\markboth{\bibname}{\bibname}
 	
 	\appendix										% Beginn des Anhangs
 	\input{Format_Anhang}				% Formatierung des Anhangs

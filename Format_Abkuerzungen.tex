@@ -19,12 +19,12 @@
 	
 	\renewcommand{\nomgroup}[1]{%
 		\ifthenelse{\equal{#1}{A}}{
-			\markboth{ABKÜRZUNGSVERZEICHNIS}{ABKÜRZUNGSVERZEICHNIS}
+			\markboth{Abkürzungsverzeichnis}{Abkürzungsverzeichnis}
 		}{%
 			\newpage
 			\ifthenelse{\equal{#1}{S}}{%
 				\chapter*{\hspace*{-\nomlabelwidth}\hspace*{-\labelsep}Symbolverzeichnis}
-				\markboth{SYMBOLVERZEICHNIS}{SYMBOLVERZEICHNIS}
+				\markboth{Symbolverzeichnis}{Symbolverzeichnis}
 				\vspace{0.22cm}
 			}{}
 		}
@@ -44,7 +44,7 @@
 		\renewcommand{\nomgroup}[1]
 		{
 			\ifthenelse{\equal{#1}{S}}{
-				\markboth{SYMBOLVERZEICHNIS}{SYMBOLVERZEICHNIS}
+				\markboth{Symbolverzeichnis}{Symbolverzeichnis}
 			}{}
 		}
 	}{}
