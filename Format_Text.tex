@@ -39,6 +39,16 @@
 \renewcommand{\headrulewidth}{.75pt}
 \renewcommand{\footrulewidth}{.75pt}
 
+% Formatierung der Kapitelüberschriften
+\titleformat{\chapter}[hang]{\Large\bfseries}{\thechapter\hspace{8pt}}{0pt}{\Large\bfseries}
+\titlespacing*{\chapter} {0pt}{0pt}{12pt}
+\titleformat{\section}[hang]{\large\bfseries}{\thesection\hspace{6pt}}{0pt}{\large\bfseries}
+\titlespacing*{\section} {0pt}{8pt}{6pt}
+\titleformat{\subsection}[hang]{\normalsize\bfseries}{\thesubsection\hspace{6pt}}{0pt}{\normalsize\bfseries}
+\titlespacing*{\subsection} {0pt}{6pt}{4pt}
+\titleformat{\subsubsection}[hang]{\normalsize}{\thesubsubsection\hspace{3pt}}{0pt}{\normalsize}
+\titlespacing*{\subsubsection} {0pt}{12pt}{3pt}
+
 
 % Bezeichnungen und Nummerierungsstile
 \renewcommand{\figurename}{Abbildung}
